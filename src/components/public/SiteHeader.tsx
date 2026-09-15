@@ -50,7 +50,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
             {nav.map((item) => (
               <Link
                 key={item.id}
-                to={item.href}
+                to={item.href as never}
                 className="eyebrow opacity-70 transition-opacity duration-500 hover:opacity-100"
                 activeProps={{ className: "eyebrow opacity-100" }}
               >
@@ -83,7 +83,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
           {nav.map((item) => (
             <Link
               key={item.id}
-              to={item.href}
+              to={item.href as never}
               onClick={() => setMenuOpen(false)}
               className="display-md"
             >
